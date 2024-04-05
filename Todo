@@ -1,0 +1,44 @@
+# Usuario
+- nome: String
+- cpf: String
+- idade: int
+- Conta:
+- ContaInvestimento:
+- contas: List<Conta>
+- consultaSaldoTotal(): double
+
+# Conta (Abstrata)
+- numero: int
+- agencia: String
+- saldo: double
+- primeiroDeposito: LocalDateTime
+- deposito(valor: double): boolean
+- saque(valor: double): boolean
+- consulta(): double
+
+# ContaCorrente (Concreta)
+
+
+# ContaPoupança (Concreta)
+
+
+# ContaInvestimento (Concreta)
+contaInvestimento(valor: double > 1000, primeiroDeposito: LocalDateTime.now()): ContaInvestimento
+* Saldo aumenta 10% por dia
+
+
+- Para a conta de investimento:
+    - Só pode ser aberta com depósito inicial de R$ 1000,00.
+    - Só é permitido sacar dinheiro se o primeiro depósito foi realizado há mais de 1 dia e não
+     pode sacar mais que o total de crédito na conta.
+    - Ao visualizar o saldo, o valor deve ser acrescido de 10% para cada dia desde o primeiro depósito.
+
+
+
+echo "# contabancaria" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/francissantosdbserver/contabancaria.git
+git push -u origin main
